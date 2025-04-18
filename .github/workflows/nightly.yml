@@ -13,6 +13,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Creating a release requires the contents:write permission on the workflow's GITHUB_TOKEN
+# Note: Specifying any permissions here overrides the defaults for any unspecified values to none
+permissions:
+  contents: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
